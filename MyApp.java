@@ -5,7 +5,11 @@ public class MyApp {
 
 	public static void main(String[] args) {
 		// This is the method that boots up the entire program
+		generateNumberGame();
+	}
 
+	public static void generateNumberGame(){
+		
 		int min = 1;
 		int max = 1000;
 		int randomNumber = (int) Math.floor(Math.random() * (max - min + 1) + min);
@@ -39,12 +43,12 @@ public class MyApp {
 				}
 			} else {
 				System.out.println("DO NOT USE LETTERS!");
+				System.out.println("Please guess the number using only numeric keys!");
 			}
 
 		} while (tempVal == 0);
 
-		scanner.close();
-
+		generateNumberGame();
 	}
 
 	// This is a handy method to check to see if a String is an integer or not
